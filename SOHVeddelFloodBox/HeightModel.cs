@@ -12,10 +12,15 @@ public class HeightModel
     public void Read()
     {
         using var reader = new StreamReader("resources/veddel_height.csv");
-
+        bool isHeader = true; 
         while (!reader.EndOfStream)
         {
             var line = reader.ReadLine();
+            if (isHeader)
+            {
+                isHeader = false; 
+                continue; 
+            }
             if (line == null) continue;
 
             var values = line.Split(',');

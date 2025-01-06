@@ -18,7 +18,11 @@
       "outputs": [
         {
           "kind": "trips",
-          "kind": "csv"
+          "outputConfiguration": {
+            "tripsFields": [
+              "ActiveCapability"
+            ]
+          }
         }
       ],
       "individual": [
