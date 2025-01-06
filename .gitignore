@@ -366,3 +366,8 @@ Explorer/out/
 Explorer/resources/omnisharp/win/
 Explorer/.webpack/
 tools/
+
+# Large GeoJSON files
+#####################
+SOHHamburg/resources/buildings_hamburg.geojson
+
