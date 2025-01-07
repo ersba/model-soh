@@ -370,4 +370,5 @@ tools/
 # Large GeoJSON files
 #####################
 SOHHamburg/resources/buildings_hamburg.geojson
-
+SOHHamburg/resources/HVV_GTFS/stop_times.txt
+SOHHamburg/resources/walk_graph_hamburg.geojson
