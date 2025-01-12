@@ -4,19 +4,21 @@
     "startPoint": "2022-09-01T06:00:00",
     "endPoint": "2022-09-01T07:00:00",
     "deltaTUnit": "seconds",
-    "console": true
+    "console": true,
+    "outputType": "csv"
   },
   "agents": [
     {
       "name": "PassengerTraveler",
       "outputs": [
         {
-          "kind": "trips",
-          "outputConfiguration": {
-            "tripsFields": [
-              "ActiveCapability"
-            ]
-          }
+          "kind": "trips"
+        }
+      ],
+      "individual": [
+        {
+          "value": true,
+          "parameter": "ResultTrajectoryEnabled"
         }
       ]
     },
@@ -42,7 +44,7 @@
       "name": "SpatialGraphMediatorLayer",
       "inputs": [
         {
-          "file": "resources/hamburg_rail_station_areas_drive_graph.geojson",
+          "file": "resources/walk_graph_hamburg.geojson",
           "inputConfiguration": {
             "modalities": [
               "Walking"
@@ -51,7 +53,7 @@
           }
         },
         {
-          "file": "resources/hamburg_s2_graph.geojson",
+          "file": "resources/hamburg_train_graph.geojson",
           "inputConfiguration": {
             "modalities": [
               "TrainDriving"
@@ -68,11 +70,11 @@
     },
     {
       "name": "TrainStationLayer",
-      "file": "resources/hamburg_s2_stations.geojson"
+      "file": "resources/hamburg_train_stations.geojson"
     },
     {
       "name": "TrainRouteLayer",
-      "file": "resources/train_u1_line.csv"
+      "file": "resources/hamburg_train_line.csv"
     },
     {
       "name": "TrainGtfsRouteLayer",
@@ -80,7 +82,7 @@
     },
     {
       "name": "TrainLayer",
-      "file": "resources/hamburg_s2_graph.geojson"
+      "file": "resources/hamburg_train_graph.geojson"
     },
     {
       "name": "TrainSchedulerLayer",

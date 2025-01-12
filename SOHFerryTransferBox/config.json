@@ -22,7 +22,17 @@
       ]
     },
     {
-      "name": "FerryDriver"
+      "name": "FerryDriver",
+      "outputs": [
+        {
+          "kind": "trips",
+          "outputConfiguration": {
+            "tripsFields": [
+              "ActiveCapability"
+            ]
+          }
+        }
+      ]
     }
   ],
   "layers": [
